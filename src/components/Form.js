@@ -32,7 +32,7 @@ export default function Form() {
     const toastId = toast.loading("Sending your message, please wait...");
 
     // toast.info(
-    //   "Form submissions are demo-only here. Please checkout the final code repo to enable it."
+    //   "Test."
     //     id: toastId,
     //   }
     // );
@@ -45,7 +45,7 @@ export default function Form() {
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
           limitRate: {
-            throttle: 5000, // you can not send more then 1 email per 5 seconds
+            throttle: 5000, 
           },
         }
       )
