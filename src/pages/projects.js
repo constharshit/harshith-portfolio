@@ -12,14 +12,21 @@ import { motion } from "framer-motion";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link = "/" }) => {
+const FeaturedProject = ({
+  type,
+  title,
+  summary,
+  img,
+  link = "/",
+  liveLink,
+}) => {
   return (
     <article
       className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid
      border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
     >
       <Link
-        href={link}
+        href={liveLink}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
@@ -38,7 +45,7 @@ const FeaturedProject = ({ type, title, summary, img, link = "/" }) => {
           {type}
         </span>
         <Link
-          href={link}
+          href={liveLink}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
@@ -86,6 +93,7 @@ const projects = () => {
                 link="https://drive.google.com/file/d/1tX6EJdnitAjyxRa_8RNsL1iAfExv2LZO/view"
                 img={eventSearchImage}
                 title="Event Search Website"
+                liveLink="https://user-381507.wl.r.appspot.com/home"
                 summary="A Event Search website which has rich features right from user input to cater user requests to fetch events from Ticketmaster API, Spotify API and many others. Backend is in Node.js and front-end in Angular."
               />
             </div>
@@ -95,6 +103,7 @@ const projects = () => {
                 link="https://drive.google.com/file/d/1_jWS5O3D0IISfjG7HKxrBVBqZ36Mai9H/view"
                 img={eventSearchStaticImage}
                 title="Event Search Webpage (Static)"
+                liveLink="https://trojansrock.wl.r.appspot.com/"
                 summary="A Event Search website which has rich features right from user input to cater user requests to fetch events from Ticketmaster API, and many others. Backend is in Flask and front end is pure HTML, CSS and without any bootstrap."
               />
             </div>
@@ -104,6 +113,7 @@ const projects = () => {
                 link="https://drive.google.com/file/d/11qdMBFhenGhVQ0tYVutUJ7DNUsbxwEDM/view"
                 img={eventSearchiOSImage}
                 title="An iOS app for Event Search"
+                liveLink="https://drive.google.com/file/d/11qdMBFhenGhVQ0tYVutUJ7DNUsbxwEDM/view"
                 summary="A Event Search iOS app which has rich features right from user input to cater user requests to fetch events from Ticketmaster API, Spotify API and many others. It has a backend in Node.js and the app was built using SwiftUI."
               />
             </div>
