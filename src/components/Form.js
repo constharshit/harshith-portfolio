@@ -99,7 +99,7 @@ export default function Form() {
             required: "I would love to know your Name!",
             minLength: {
               value: 3,
-              message: "Oops! Name should be atleast 3 characters long.",
+              message: "Oops! Such a short Name.",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none border border-black focus:ring-2 focus:ring-dark dark:focus:ring-white  dark:text-dark"
