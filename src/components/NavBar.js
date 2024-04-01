@@ -37,6 +37,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   };
   return (
     <button
+      name="nav-mobile-button"
       href={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
       onClick={handleClick}
@@ -62,6 +63,7 @@ const NavBar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button
+        name="nav-bar-button"
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
       >
@@ -110,6 +112,7 @@ const NavBar = () => {
           </motion.a>
 
           <button
+            name="chage-theme-button"
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className={`ml-3 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
@@ -177,6 +180,7 @@ const NavBar = () => {
             </motion.a>
 
             <button
+              name="mode-button"
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
               className={`ml-3 flex items-center justify-center rounded-full p-1 ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"

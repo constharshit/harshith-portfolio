@@ -28,11 +28,12 @@ border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light  lg:p-8 xs:r
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 I am Harshith, a graduate student majoring in Computer Science
                 at University of Southern California. I also play Tennis for the
-                the USC Club Tennis Team wherein I represent USC accross
-                various tournaments.
+                the USC Club Tennis Team wherein I represent USC accross various
+                tournaments.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
+                  name="Resume-Link"
                   href="/Harshit_Resume_2024.pdf"
                   target={"_blank"}
                   className="flex items-center dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light bg-dark text-light p-2.5 px-6 

@@ -94,12 +94,12 @@ export default function Form() {
         <motion.input
           variants={item}
           type="text"
-          placeholder="name"
+          placeholder="Name"
           {...register("name", {
-            required: "This field is required!",
+            required: "I would love to know your Name!",
             minLength: {
               value: 3,
-              message: "Name should be atleast 3 characters long.",
+              message: "Oops! Name should be atleast 3 characters long.",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none border border-black focus:ring-2 focus:ring-dark dark:focus:ring-white  dark:text-dark"
@@ -112,8 +112,8 @@ export default function Form() {
         <motion.input
           variants={item}
           type="email"
-          placeholder="email"
-          {...register("email", { required: "This field is required!" })}
+          placeholder="Email"
+          {...register("email", { required: "How can I contact you !?" })}
           className="w-full p-2 rounded-md shadow-lg text-foreground border border-black focus:outline-none focus:ring-2 focus:ring-dark dark:focus:ring-white   dark:text-dark"
         />
         {errors.email && (
@@ -123,16 +123,16 @@ export default function Form() {
         )}
         <motion.textarea
           variants={item}
-          placeholder="message"
+          placeholder="Message"
           {...register("message", {
-            required: "This field is required!",
+            required: "Say a few words :)",
             maxLength: {
               value: 500,
-              message: "Message should be less than 500 characters",
+              message: "OMG! That is a lot.",
             },
             minLength: {
               value: 10,
-              message: "Message should be more than 10 characters",
+              message: "Add a few more words. It would be nice :)",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground border border-black  focus:outline-none focus:ring-2 focus:ring-dark dark:focus:ring-white   dark:text-dark"
@@ -144,6 +144,7 @@ export default function Form() {
         )}
 
         <motion.input
+          name="contact-button"
           variants={item}
           value="Send your message!"
           className="flex items-center dark:bg-light dark:text-dark cursor-pointer hover:dark:border-light hover:dark:bg-dark hover:dark:text-light bg-dark text-light p-2.5 px-6 
